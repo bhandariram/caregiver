@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok Growth Strategy Proposal – Caregiver Academia Nepal</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ca-teal: #1D9E75;
+    --ca-teal-light: #E1F5EE;
+    --ca-teal-dark: #0F6E56;
+    --ca-green: #5CAB35;
+    --ca-green-light: #EAF3DE;
+    --ca-navy: #1a2e44;
+    --ca-text: #1e2d3d;
+    --ca-muted: #5a6a7a;
+    --ca-border: #e2ece8;
+    --ca-white: #ffffff;
+    --ca-bg: #f7faf9;
+    --ca-accent: #FF6B35;
+    --ca-tiktok: #000000;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ca-white);
+    color: var(--ca-text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* COVER PAGE */
+  .cover {
+    background: var(--ca-navy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(29,158,117,0.18) 0%, transparent 70%);
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 40px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(92,171,53,0.12) 0%, transparent 70%);
+  }
+
+  .cover-logo-area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+
+  .logo-icon {
+    width: 52px; height: 52px;
+    background: var(--ca-teal);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -1px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .logo-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    background: rgba(29,158,117,0.2);
+    border: 1px solid rgba(29,158,117,0.4);
+    color: #5DCAA5;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 4px;
+    margin-bottom: 28px;
+    font-weight: 500;
+  }
+
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 54px;
+    font-weight: 900;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    max-width: 720px;
+  }
+
+  .cover h1 span {
+    color: var(--ca-teal);
+  }
+
+  .cover-subtitle {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    max-width: 520px;
+    line-height: 1.8;
+    margin-bottom: 56px;
+  }
+
+  .cover-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 680px;
+  }
+
+  .cover-meta-item {
+    background: rgba(255,255,255,0.05);
+    border: 0.5px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+
+  .cover-meta-item .label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 6px;
+  }
+
+  .cover-meta-item .value {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .cover-meta-item .value small {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 400;
+  }
+
+  .cover-footer {
+    position: absolute;
+    bottom: 40px; left: 60px; right: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 0.5px solid rgba(255,255,255,0.1);
+  }
+
+  .cover-footer p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .tiktok-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .tiktok-dot {
+    width: 8px; height: 8px;
+    background: var(--ca-teal);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* MAIN CONTENT */
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 60px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 36px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--ca-border);
+  }
+
+  .section-num {
+    width: 36px; height: 36px;
+    background: var(--ca-teal);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    flex-shrink: 0;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--ca-navy);
+  }
+
+  /* EXECUTIVE SUMMARY */
+  .exec-intro {
+    background: var(--ca-teal-light);
+    border-left: 4px solid var(--ca-teal);
+    border-radius: 0 10px 10px 0;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+  }
+
+  .exec-intro p {
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--ca-teal-dark);
+  }
+
+  .exec-intro strong {
+    color: var(--ca-teal-dark);
+    font-weight: 600;
+  }
+
+  .value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .value-card {
+    background: var(--ca-bg);
+    border: 1px solid var(--ca-border);
+    border-radius: 12px;
+    padding: 22px 20px;
+    position: relative;
+  }
+
+  .value-card .icon {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .value-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ca-navy);
+    margin-bottom: 8px;
+  }
+
+  .value-card p {
+    font-size: 13px;
+    color: var(--ca-muted);
+    line-height: 1.6;
+  }
+
+  /* PROPOSAL PARTIES */
+  .parties-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .party-card {
+    background: var(--ca-white);
+    border: 1px solid var(--ca-border);
+    border-radius: 14px;
+    padding: 24px;
+  }
+
+  .party-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ca-muted);
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+
+  .party-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ca-navy);
+    margin-bottom: 6px;
+  }
+
+  .party-role {
+    font-size: 13px;
+    color: var(--ca-teal);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+
+  .party-detail {
+    font-size: 13px;
+    color: var(--ca-muted);
+  }
+
+  /* KEY CONTACTS */
+  .contacts-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .contact-card {
+    background: var(--ca-navy);
+    border-radius: 12px;
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .contact-avatar {
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: var(--ca-teal);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .contact-info .name {
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 3px;
+  }
+
+  .contact-info .title {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .contact-info .dept {
+    font-size: 11px;
+    color: var(--ca-teal);
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  /* CONTRACT TERMS */
+  .contract-box {
+    background: var(--ca-bg);
+    border: 1px solid var(--ca-border);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 32px;
+  }
+
+  .contract-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .contract-item {
+    padding: 0 24px;
+    border-right: 1px solid var(--ca-border);
+  }
+
+  .contract-item:first-child { padding-left: 0; }
+  .contract-item:last-child { border-right: none; }
+
+  .contract-item .clabel {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ca-muted);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .contract-item .cval {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ca-navy);
+    margin-bottom: 3px;
+  }
+
+  .contract-item .csub {
+    font-size: 12px;
+    color: var(--ca-muted);
+  }
+
+  .rate-highlight {
+    background: var(--ca-teal);
+    border-radius: 12px;
+    padding: 22px 28px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 20px;
+  }
+
+  .rate-item {
+    padding: 0 20px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .rate-item:first-child { padding-left: 0; }
+  .rate-item:last-child { border-right: none; }
+
+  .rate-item .rl { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 6px; }
+  .rate-item .rv { font-size: 19px; font-weight: 700; color: white; font-family: 'DM Mono', monospace; }
+  .rate-item .rs { font-size: 11px; color: rgba(255,255,255,0.6); }
+
+  /* MY ROLE */
+  .role-intro {
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--ca-muted);
+    margin-bottom: 28px;
+  }
+
+  .role-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .role-item {
+    background: var(--ca-white);
+    border: 1px solid var(--ca-border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .role-item .ri-icon {
+    width: 32px; height: 32px;
+    background: var(--ca-teal-light);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  .role-item h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ca-navy);
+    margin-bottom: 4px;
+  }
+
+  .role-item p {
+    font-size: 12px;
+    color: var(--ca-muted);
+    line-height: 1.6;
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: var(--ca-border);
+    margin: 50px 0;
+  }
+
+  /* PHASE TIMELINE */
+  .phase-block {
+    margin-bottom: 40px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--ca-border);
+  }
+
+  .phase-header {
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: default;
+  }
+
+  .phase-1 .phase-header { background: #e8f5f0; }
+  .phase-2 .phase-header { background: #eaf3de; }
+  .phase-3 .phase-header { background: #e6f1fb; }
+
+  .phase-header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .phase-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ca-teal);
+    background: white;
+    border-radius: 6px;
+    padding: 4px 10px;
+    border: 1px solid rgba(29,158,117,0.2);
+  }
+
+  .phase-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ca-navy);
+  }
+
+  .phase-dates {
+    font-size: 12px;
+    color: var(--ca-muted);
+    font-family: 'DM Mono', monospace;
+    background: white;
+    border: 1px solid var(--ca-border);
+    border-radius: 6px;
+    padding: 4px 12px;
+  }
+
+  .phase-body {
+    padding: 28px;
+    background: white;
+  }
+
+  .phase-body .phase-desc {
+    font-size: 14px;
+    color: var(--ca-muted);
+    margin-bottom: 22px;
+    line-height: 1.7;
+  }
+
+  .week-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .week-card {
+    background: var(--ca-bg);
+    border-radius: 10px;
+    padding: 18px;
+    border: 1px solid var(--ca-border);
+  }
+
+  .week-card .week-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ca-teal);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .week-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ca-navy);
+    margin-bottom: 10px;
+  }
+
+  .week-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .week-card ul li {
+    font-size: 12.5px;
+    color: var(--ca-muted);
+    padding: 4px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+  }
+
+  .week-card ul li::before {
+    content: '→';
+    color: var(--ca-teal);
+    flex-shrink: 0;
+    font-size: 11px;
+    margin-top: 2px;
+  }
+
+  .team-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--ca-border);
+  }
+
+  .team-pill {
+    background: var(--ca-teal-light);
+    color: var(--ca-teal-dark);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+
+  /* CONTENT STRATEGY */
+  .content-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .pillar {
+    border-radius: 12px;
+    padding: 22px 18px;
+    border: 1px solid var(--ca-border);
+  }
+
+  .pillar.p1 { background: #FFF8F5; border-color: #FDDDD0; }
+  .pillar.p2 { background: var(--ca-teal-light); border-color: rgba(29,158,117,0.2); }
+  .pillar.p3 { background: #F0F8FF; border-color: #CCE4F7; }
+  .pillar.p4 { background: var(--ca-green-light); border-color: rgba(92,171,53,0.2); }
+  .pillar.p5 { background: #FFF5E0; border-color: #FAE0A0; }
+
+  .pillar .p-icon { font-size: 24px; margin-bottom: 12px; }
+  .pillar h4 { font-size: 14px; font-weight: 600; color: var(--ca-navy); margin-bottom: 8px; }
+  .pillar p { font-size: 12px; color: var(--ca-muted); line-height: 1.6; }
+
+  /* CROSS-CHANNEL */
+  .channel-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+  }
+
+  .channel-table th {
+    background: var(--ca-navy);
+    color: white;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  .channel-table th:first-child { border-radius: 10px 0 0 0; }
+  .channel-table th:last-child { border-radius: 0 10px 0 0; }
+
+  .channel-table td {
+    padding: 13px 16px;
+    font-size: 13px;
+    color: var(--ca-text);
+    border-bottom: 1px solid var(--ca-border);
+    vertical-align: top;
+  }
+
+  .channel-table tr:last-child td { border-bottom: none; }
+  .channel-table tr:nth-child(even) td { background: var(--ca-bg); }
+
+  .channel-name {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ch-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+
+  .ch-tiktok { background: #000; }
+  .ch-fb { background: #1877F2; }
+  .ch-ig { background: #E4405F; }
+  .ch-yt { background: #FF0000; }
+
+  /* KPI SECTION */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .kpi-card {
+    background: var(--ca-navy);
+    border-radius: 12px;
+    padding: 24px 22px;
+    text-align: center;
+  }
+
+  .kpi-card .kpi-phase {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 8px;
+  }
+
+  .kpi-card .kpi-title {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 12px;
+  }
+
+  .kpi-card .kpi-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--ca-teal);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .kpi-card .kpi-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* DIFFERENTIATION */
+  .diff-block {
+    background: linear-gradient(135deg, var(--ca-navy) 0%, #0d1f31 100%);
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin-bottom: 40px;
+  }
+
+  .diff-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+  }
+
+  .diff-block .diff-sub {
+    color: rgba(255,255,255,0.5);
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+
+  .diff-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .diff-item {
+    background: rgba(255,255,255,0.05);
+    border: 0.5px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+
+  .diff-item .di-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ca-teal);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .diff-item p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+  }
+
+  /* FINANCIAL */
+  .financial-box {
+    border: 1.5px solid var(--ca-teal);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  .financial-head {
+    background: var(--ca-teal);
+    padding: 20px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .financial-head h3 {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .financial-head .total {
+    font-family: 'DM Mono', monospace;
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .financial-rows {
+    background: white;
+  }
+
+  .fin-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 16px 28px;
+    border-bottom: 1px solid var(--ca-border);
+    align-items: center;
+    font-size: 13.5px;
+  }
+
+  .fin-row:last-child { border-bottom: none; }
+
+  .fin-row.header {
+    background: var(--ca-bg);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ca-muted);
+    font-weight: 500;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .fin-row.total-row {
+    background: var(--ca-teal-light);
+    font-weight: 600;
+    color: var(--ca-teal-dark);
+    font-size: 14px;
+  }
+
+  .fin-row .item-name { font-weight: 500; color: var(--ca-navy); }
+  .fin-row .item-num { color: var(--ca-muted); text-align: right; }
+  .fin-row .item-amount { color: var(--ca-teal-dark); font-weight: 600; text-align: right; font-family: 'DM Mono', monospace; }
+
+  /* SCHEDULE */
+  .schedule-box {
+    border: 1px solid var(--ca-border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  .schedule-head {
+    background: var(--ca-bg);
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--ca-border);
+  }
+
+  .schedule-head h3 {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--ca-navy);
+  }
+
+  .schedule-head .start-badge {
+    margin-left: auto;
+    background: var(--ca-teal);
+    color: white;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .schedule-week {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--ca-border);
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .schedule-week:last-child { border-bottom: none; }
+
+  .sw-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--ca-muted);
+    line-height: 1.5;
+  }
+
+  .sw-date .day-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ca-navy);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .sw-date .time {
+    color: var(--ca-teal);
+    font-weight: 500;
+    font-size: 11px;
+    background: var(--ca-teal-light);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 4px;
+  }
+
+  .sw-detail h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ca-navy);
+    margin-bottom: 6px;
+  }
+
+  .sw-detail p {
+    font-size: 12.5px;
+    color: var(--ca-muted);
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  .sw-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .sw-tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    background: var(--ca-teal-light);
+    color: var(--ca-teal-dark);
+  }
+
+  /* SIGNATURE */
+  .sig-section {
+    background: var(--ca-navy);
+    border-radius: 16px;
+    padding: 40px 44px;
+    margin-top: 50px;
+  }
+
+  .sig-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: white;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+
+  .sig-section p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 36px;
+  }
+
+  .sig-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .sig-box {
+    border-top: 1.5px solid rgba(255,255,255,0.2);
+    padding-top: 16px;
+  }
+
+  .sig-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .sig-role {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 12px;
+  }
+
+  .sig-date-field {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* PRINT */
+  @media print {
+    .cover { page-break-after: always; min-height: 100vh; }
+    .phase-block, .financial-box, .sig-section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover">
+  <div class="cover-logo-area">
+    <div class="logo-icon">CA</div>
+    <div class="logo-text">Caregiver Academia Nepal</div>
+  </div>
+
+  <div class="cover-badge">📋 Strategic Proposal · 90-Day Contract</div>
+
+  <h1>TikTok View Growth <span>&</span> Cross-Channel Content Strategy</h1>
+
+  <p class="cover-subtitle">
+    A data-driven, creatively led approach to growing Caregiver Academia Nepal's digital presence — anchored on TikTok authority-building and amplified across every relevant platform.
+  </p>
+
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <div class="label">Start Date</div>
+      <div class="value">May 13, 2026 <small></small></div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="label">Duration</div>
+      <div class="value">90 Days <small>(3 months)</small></div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="label">Committed Hours</div>
+      <div class="value">16 hrs<small>/month</small></div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="label">Total Value</div>
+      <div class="value">NPR 1,20,000</div>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <p>Prepared for: Mr. Bikash Chalise & Mr. Hira Tamang · Caregiver Academia Nepal</p>
+    <div class="tiktok-badge">
+      <div class="tiktok-dot"></div>
+      TikTok Growth · First Session: 13 May 2026, 4–6 PM
+    </div>
+  </div>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="page">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <h2>Executive Summary</h2>
+  </div>
+
+  <div class="exec-intro">
+    <p>
+      This proposal outlines a focused <strong>90-day digital content growth engagement</strong> for Caregiver Academia Nepal. The primary objective is to establish TikTok as a high-reach awareness channel — capturing the attention of prospective students, caregivers, and healthcare professionals — while simultaneously distributing content across Facebook, Instagram, and YouTube for maximum reach.
+      <br><br>
+      Rather than generic content output, this strategy centers on <strong>educational authority, emotional storytelling, and algorithmic consistency</strong> — the three pillars that drive sustainable view growth on TikTok and trust-building on every other platform.
+    </p>
+  </div>
+
+  <div class="value-grid">
+    <div class="value-card">
+      <div class="icon">🎯</div>
+      <h3>Strategy-First</h3>
+      <p>Every content decision is backed by platform data, audience insight, and competitive analysis — not guesswork.</p>
+    </div>
+    <div class="value-card">
+      <div class="icon">⚙️</div>
+      <h3>Supervised Execution</h3>
+      <p>I guide internal teams at Academia with clear briefs, scripts, feedback loops, and weekly direction sessions.</p>
+    </div>
+    <div class="value-card">
+      <div class="icon">📊</div>
+      <h3>Measurable Growth</h3>
+      <p>Transparent KPIs from Day 1. Weekly performance reviews ensure the strategy adapts to real data.</p>
+    </div>
+    <div class="value-card">
+      <div class="icon">🔄</div>
+      <h3>Cross-Channel Amplification</h3>
+      <p>TikTok-native content intelligently repurposed for Facebook, Instagram Reels, and YouTube Shorts.</p>
+    </div>
+    <div class="value-card">
+      <div class="icon">🏥</div>
+      <h3>Niche Authority</h3>
+      <p>Caregiver training is an underrepresented niche in Nepal's digital space — a massive first-mover opportunity.</p>
+    </div>
+    <div class="value-card">
+      <div class="icon">🚀</div>
+      <h3>Scalable System</h3>
+      <p>The content systems and workflows built during this engagement will serve Academia beyond this contract.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PARTIES -->
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <h2>Parties & Key Contacts</h2>
+  </div>
+
+  <div class="parties-grid">
+    <div class="party-card">
+      <div class="party-label">Service Provider</div>
+      <div class="party-name">Content & Growth Strategist</div>
+      <div class="party-role">Strategy, Supervision & Analytics</div>
+      <div class="party-detail">
+        Independent digital content strategist with expertise in short-form video growth, platform algorithms, content architecture, and marketing funnel design. Responsible for planning, creative direction, and performance oversight throughout the engagement.
+      </div>
+    </div>
+    <div class="party-card">
+      <div class="party-label">Client Organization</div>
+      <div class="party-name">Caregiver Academia Nepal</div>
+      <div class="party-role">Healthcare Education Provider</div>
+      <div class="party-detail">
+        An institution dedicated to training professional caregivers and healthcare support workers in Nepal. The academy will provide internal team members, facilities, content subjects, and institutional knowledge to support the strategy's execution.
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size:13px; color:var(--ca-muted); margin-bottom:16px; font-weight:600; letter-spacing:1px; text-transform:uppercase;">Primary Coordinators at Academia</p>
+  <div class="contacts-row">
+    <div class="contact-card">
+      <div class="contact-avatar">BC</div>
+      <div class="contact-info">
+        <div class="name">Mr. Bikash Chalise</div>
+        <div class="title">Key Liaison — Strategy & Operations</div>
+        <div class="dept">🔑 Responsible for team coordination, content approvals, and scheduling</div>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-avatar">HT</div>
+      <div class="contact-info">
+        <div class="name">Mr. Hira Tamang</div>
+        <div class="title">Key Liaison — Content & Communication</div>
+        <div class="dept">🔑 Responsible for content review, brand tone, and internal communication</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CONTRACT TERMS -->
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <h2>Contract Terms & Compensation</h2>
+  </div>
+
+  <div class="contract-box">
+    <div class="contract-grid">
+      <div class="contract-item">
+        <div class="clabel">Contract Period</div>
+        <div class="cval">90 Days</div>
+        <div class="csub">13 May – 11 Aug 2026</div>
+      </div>
+      <div class="contract-item">
+        <div class="clabel">Weekly Commitment</div>
+        <div class="cval">4 Hours</div>
+        <div class="csub">2 hrs office · 2 hrs remote</div>
+      </div>
+      <div class="contract-item">
+        <div class="clabel">Monthly Hours</div>
+        <div class="cval">16 Hours</div>
+        <div class="csub">Total committed per month</div>
+      </div>
+    </div>
+
+    <div class="rate-highlight">
+      <div class="rate-item">
+        <div class="rl">Hourly Rate</div>
+        <div class="rv">NPR 2,500</div>
+        <div class="rs">per hour</div>
+      </div>
+      <div class="rate-item">
+        <div class="rl">Monthly Fee</div>
+        <div class="rv">NPR 40,000</div>
+        <div class="rs">16 hrs × NPR 2,500</div>
+      </div>
+      <div class="rate-item">
+        <div class="rl">Total Contract</div>
+        <div class="rv">NPR 1,20,000</div>
+        <div class="rs">3 months total</div>
+      </div>
+      <div class="rate-item">
+        <div class="rl">Office Sessions</div>
+        <div class="rv">Wed 4–6 PM</div>
+        <div class="rs">Weekly, starting May 13</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- MY ROLE -->
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <h2>My Role & Deliverables</h2>
+  </div>
+
+  <p class="role-intro">
+    My role is purely <strong>strategic and supervisory</strong> — I architect the system, set the direction, and ensure the team executes with precision. I do not produce content myself. Instead, I build the infrastructure for consistent, high-quality production by the Academia team.
+  </p>
+
+  <div class="role-grid">
+    <div class="role-item">
+      <div class="ri-icon">📐</div>
+      <div>
+        <h4>Content Architecture</h4>
+        <p>Designing content pillars, series formats, and a sustainable publishing calendar tailored to TikTok's algorithm requirements.</p>
+      </div>
+    </div>
+    <div class="role-item">
+      <div class="ri-icon">🎬</div>
+      <div>
+        <h4>Creative Direction & Scripting</h4>
+        <p>Writing content briefs, video scripts, hooks, and CTAs for every post. Guiding the in-house creator on delivery and tone.</p>
+      </div>
+    </div>
+    <div class="role-item">
+      <div class="ri-icon">📅</div>
+      <div>
+        <h4>Weekly Planning Sessions</h4>
+        <p>Two-hour office sessions every Wednesday (4–6 PM) to plan the upcoming week, review performance, and brief the team.</p>
+      </div>
+    </div>
+    <div class="role-item">
+      <div class="ri-icon">📈</div>
+      <div>
+        <h4>Performance Analysis</h4>
+        <p>Weekly data review (2 hrs remote) — analyzing TikTok analytics, identifying what's working, and adjusting the strategy accordingly.</p>
+      </div>
+    </div>
+    <div class="role-item">
+      <div class="ri-icon">🔁</div>
+      <div>
+        <h4>Cross-Platform Repurposing Strategy</h4>
+        <p>Supervising adaptation of TikTok content to Facebook, Instagram Reels, and YouTube Shorts — with platform-specific optimizations.</p>
+      </div>
+    </div>
+    <div class="role-item">
+      <div class="ri-icon">📋</div>
+      <div>
+        <h4>Monthly Reporting</h4>
+        <p>Delivering a detailed monthly performance report with growth charts, insights, competitive benchmarking, and next-phase recommendations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CONTENT DIFFERENTIATION -->
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <h2>What Makes This Different</h2>
+  </div>
+
+  <div class="diff-block">
+    <h3>This is not generic social media management.</h3>
+    <p class="diff-sub">Here's exactly how this engagement creates a category of its own in Nepal's healthcare education content space.</p>
+    <div class="diff-items">
+      <div class="diff-item">
+        <div class="di-label">Algorithm Intelligence</div>
+        <p>Content timing, hook length, caption structure, and hashtag layering are all driven by TikTok algorithm data — not gut feeling.</p>
+      </div>
+      <div class="diff-item">
+        <div class="di-label">Niche Authority Positioning</div>
+        <p>Caregiver training in Nepal has near-zero TikTok presence. This is a first-mover opportunity to dominate a niche before anyone else does.</p>
+      </div>
+      <div class="diff-item">
+        <div class="di-label">Emotional + Educational Balance</div>
+        <p>The content strategy balances emotionally resonant storytelling (why caregiving matters) with credible educational content (how to train, where to go).</p>
+      </div>
+      <div class="diff-item">
+        <div class="di-label">Internal Capability Building</div>
+        <p>Unlike hiring an agency, this engagement builds permanent internal knowledge. Academia's team grows alongside the channel.</p>
+      </div>
+      <div class="diff-item">
+        <div class="di-label">Systems, Not One-Offs</div>
+        <p>Every format, template, and workflow I create becomes a repeatable asset for the organization — lasting well beyond the 90-day contract.</p>
+      </div>
+      <div class="diff-item">
+        <div class="di-label">Direct Strategic Accountability</div>
+        <p>You work directly with the strategist — no account managers, no middle layers. Mr. Bikash and Mr. Hira get full access to my thinking.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CONTENT STRATEGY -->
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <h2>Content Strategy & Pillars</h2>
+  </div>
+
+  <p class="role-intro">All content will be built around 5 strategic pillars, each serving a distinct audience intent and stage of awareness.</p>
+
+  <div class="content-pillars">
+    <div class="pillar p1">
+      <div class="p-icon">🎓</div>
+      <h4>Education & Training Tips</h4>
+      <p>Quick, practical caregiver skills — what to do in real situations. High save rate; positions Academia as the expert source.</p>
+    </div>
+    <div class="pillar p2">
+      <div class="p-icon">❤️</div>
+      <h4>Emotional Stories</h4>
+      <p>Student success journeys, day-in-the-life of a caregiver, impact stories. High share rate; drives brand awareness organically.</p>
+    </div>
+    <div class="pillar p3">
+      <div class="p-icon">💼</div>
+      <h4>Career Opportunity</h4>
+      <p>Scope of caregiving in Nepal and abroad, salary ranges, job placement stories. Drives enrollment inquiries and DMs.</p>
+    </div>
+    <div class="pillar p4">
+      <div class="p-icon">🏥</div>
+      <h4>Behind the Academia</h4>
+      <p>Classroom footage, trainer introductions, facility walkthroughs. Builds trust and reduces hesitation among prospective students.</p>
+    </div>
+    <div class="pillar p5">
+      <div class="p-icon">🌍</div>
+      <h4>Industry & Awareness</h4>
+      <p>Global caregiver demand, elderly care trends in Nepal, healthcare awareness. Establishes thought leadership beyond just promotion.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CROSS CHANNEL -->
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <h2>Cross-Channel Publication Plan</h2>
+  </div>
+
+  <table class="channel-table">
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Content Format</th>
+        <th>Frequency</th>
+        <th>Adaptation Strategy</th>
+        <th>Team Member</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="channel-name">
+            <div class="ch-dot ch-tiktok"></div>
+            TikTok
+          </div>
+          <small style="color:var(--ca-teal); font-size:11px; font-weight:600;">PRIMARY CHANNEL</small>
+        </td>
+        <td>Short-form vertical video (15–90s)</td>
+        <td>4–5 posts/week</td>
+        <td>Native creation — hooks optimized for TikTok FYP algorithm</td>
+        <td>Video Creator + Editor</td>
+      </tr>
+      <tr>
+        <td><div class="channel-name"><div class="ch-dot ch-ig"></div> Instagram Reels</div></td>
+        <td>Reels (same video, re-edited caption & cover)</td>
+        <td>3–4 posts/week</td>
+        <td>Remove TikTok watermark, new thumbnail, IG-specific caption & hashtags</td>
+        <td>Social Media Manager</td>
+      </tr>
+      <tr>
+        <td><div class="channel-name"><div class="ch-dot ch-fb"></div> Facebook</div></td>
+        <td>Reels + Carousel posts + Static graphics</td>
+        <td>4–5 posts/week</td>
+        <td>Mix of video reposts + longer-form text posts targeting older demographic</td>
+        <td>Social Media Manager</td>
+      </tr>
+      <tr>
+        <td><div class="channel-name"><div class="ch-dot ch-yt"></div> YouTube Shorts</div></td>
+        <td>YouTube Shorts (same vertical video)</td>
+        <td>2–3 posts/week</td>
+        <td>Re-titled for search, longer description with keywords, chapter markers if applicable</td>
+        <td>Video Editor</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <!-- 90-DAY PLAN -->
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <h2>90-Day Execution Roadmap</h2>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-block phase-1">
+    <div class="phase-header">
+      <div class="phase-header-left">
+        <span class="phase-num">Phase 01</span>
+        <h3>Foundation & Discovery</h3>
+      </div>
+      <span class="phase-dates">13 May – 10 Jun 2026</span>
+    </div>
+    <div class="phase-body">
+      <p class="phase-desc">The first month is about understanding, setting up systems, and establishing a consistent foundation. No large bets — just smart, steady positioning while learning what resonates.</p>
+      <div class="week-grid">
+        <div class="week-card">
+          <div class="week-label">Week 1 · May 13–17</div>
+          <h4>Kickoff & Audit</h4>
+          <ul>
+            <li>First session with Bikash & Hira — goals, expectations, constraints</li>
+            <li>Full audit of existing TikTok, FB, IG, and YouTube accounts</li>
+            <li>Competitor & niche analysis (caregiver training accounts globally)</li>
+            <li>Define target audience personas (students, parents, employers)</li>
+          </ul>
+          <div class="team-row">
+            <span class="team-pill">Bikash Chalise</span>
+            <span class="team-pill">Hira Tamang</span>
+            <span class="team-pill">Social Media Manager</span>
+          </div>
+        </div>
+        <div class="week-card">
+          <div class="week-label">Week 2 · May 20–24</div>
+          <h4>Strategy Design & Team Briefing</h4>
+          <ul>
+            <li>Finalize 5 content pillars and format templates</li>
+            <li>Brief video creator and editor on production standards</li>
+            <li>Set up content calendar (Notion/Trello) and publishing workflow</li>
+            <li>Create first batch of script briefs (8–10 video concepts)</li>
+          </ul>
+          <div class="team-row">
+            <span class="team-pill">Video Creator</span>
+            <span class="team-pill">Video Editor</span>
+            <span class="team-pill">Hira Tamang</span>
+          </div>
+        </div>
+        <div class="week-card">
+          <div class="week-label">Week 3 · May 27–31</div>
+          <h4>First Content Batch & Publishing</h4>
+          <ul>
+            <li>Supervise shooting of first 5 TikTok videos</li>
+            <li>Review edits, provide feedback, approve finals</li>
+            <li>Publish on schedule; monitor early engagement signals</li>
+            <li>Set up cross-channel posting workflow with team</li>
+          </ul>
+          <div class="team-row">
+            <span class="team-pill">Video Creator</span>
+            <span class="team-pill">Video Editor</span>
+            <span class="team-pill">Social Media Manager</span>
+          </div>
+        </div>
+        <div class="week-card">
+          <div class="week-label">Week 4 · Jun 4–8</div>
+          <h4>First Review & Optimization</h4>
+          <ul>
+            <li>Analyze Week 1–3 performance data (views, watch time, shares)</li>
+            <li>Identify top-performing hooks and formats</li>
+            <li>Adjust content mix based on early signals</li>
+            <li>Deliver Month 1 Report to Bikash & Hira</li>
+          </ul>
+          <div class="team-row">
+            <span class="team-pill">Bikash Chalise</span>
+            <span class="team-pill">Hira Tamang</span>
+            <span class="team-pill">Social Media Manager</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-block phase-2">
+    <div class="phase-header">
+      <div class="phase-header-left">
+        <span class="phase-num">Phase 02</span>
+        <h3>Growth & Amplification</h3>
+      </div>
+      <span class="phase-dates">11 Jun – 8 Jul 2026</span>
+    </div>
+    <div class="phase-body">
+      <p class="phase-desc">Month 2 doubles down on what's working. The team is now in rhythm, and the focus shifts to scaling frequency, deepening content quality, and experimenting with viral formats.</p>
+      <div class="week-grid">
+        <div class="week-card">
+          <div class="week-label">Week 5 · Jun 11–15</div>
+          <h4>Scale What's Working</h4>
+          <ul>
+            <li>Increase best-performing content format frequency</li>
+            <li>Introduce "Series" format (e.g. "Caregiver of the Week")</li>
+            <li>Launch behind-the-scenes content pillar</li>
+            <li>Brief team on storytelling arc techniques</li>
+          </ul>
+          <div class="team-row">
+            <span class="team-pill">Video Creator</span>
+            <span class="team-pill">Trainer/Faculty</span>
+            <span class="team-pill">Video Editor</span>
+          </div>
+        </div>
+        <div class="week-card">
+          <div class="week-label">Week 6 · Jun 18–22</div>
+          <h4>Trend Riding & Experiment</h4>
+          <ul>
+            <li>Identify 2–3 relevant TikTok trends to adapt for caregiver niche</li>
+            <li>Script "myth vs. fact" or "did you know" format videos</li>
+            <li>Experiment with student testimonial content</li>
+            <li>Monitor cross-channel reposts for performance lift</li>
+          </ul>
+          <div class="team-row">
+            <span class="team-pill">Video Creator</span>
+            <span class="team-pill">Students (Featured)</span>
+            <span class="team-pill">Social Media Manager</span>
+          </div>
+        </div>
+        <div class="week-card">
+          <div class="week-label">Week 7 · Jun 25–29</div>
+          <h4>Community & Engagement Push</h4>
+          <ul>
+            <li>Design comment engagement strategy (reply with video)</li>
+            <li>Introduce Q&A content format based on audience questions</li>
+            <li>Push community-facing content (polls, challenges)</li>
+            <li>Review mid-month performance; adjust week 8 briefs</li>
+          </ul>
+          <div class="team-row">
+            <span class="team-pill">Social Media Manager</span>
+            <span class="team-pill">Video Creator</span>
+            <span class="team-pill">Hira Tamang</span>
+          </div>
+        </div>
+        <div class="week-card">
+          <div class="week-label">Week 8 · Jul 2–6</div>
+          <h4>Month 2 Review & Strategy Refinement</h4>
+          <ul>
+            <li>Full analytics review: views, followers, reach, engagement rate</li>
+            <li>Benchmark against Month 1 — show growth delta</li>
+            <li>Identify content angles for Phase 3 campaign push</li>
+            <li>Deliver Month 2 Report to Bikash & Hira</li>
+          </ul>
+          <div class="team-row">
+            <span class="team-pill">Bikash Chalise</span>
+            <span class="team-pill">Hira Tamang</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-block phase-3">
+    <div class="phase-header">
+      <div class="phase-header-left">
+        <span class="phase-num">Phase 03</span>
+        <h3>Authority & Conversion</h3>
+      </div>
+      <span class="phase-dates">9 Jul – 11 Aug 2026</span>
+    </div>
+    <div class="phase-body">
+      <p class="phase-desc">The final phase shifts from pure reach to conversion and authority — driving course inquiries, profile bio clicks, and establishing Caregiver Academia as Nepal's most recognized caregiver training institution online.</p>
+      <div class="week-grid">
+        <div class="week-card">
+          <div class="week-label">Week 9 · Jul 9–13</div>
+          <h4>Authority Content Push</h4>
+          <ul>
+            <li>Launch "Expert Speaks" video series with faculty trainers</li>
+            <li>Create high-credibility content: certification, job placement rates</li>
+            <li>Develop "Day in the Life of a Caregiver in Japan/UK" career aspiration content</li>
+            <li>Introduce long-form content for YouTube (5–10 mins)</li>
+          </ul>
+          <div class="team-row">
+            <span class="team-pill">Senior Trainer</span>
+            <span class="team-pill">Video Creator</span>
+            <span class="team-pill">Video Editor</span>
+          </div>
+        </div>
+        <div class="week-card">
+          <div class="week-label">Week 10 · Jul 16–20</div>
+          <h4>Enrollment-Focused Content</h4>
+          <ul>
+            <li>Create "How to enroll at Caregiver Academia Nepal" video</li>
+            <li>Strong CTA-driven content: "Message us / Link in bio"</li>
+            <li>Student success story mini-documentary (2–3 min TikTok)</li>
+            <li>Coordinate with admission team for lead tracking from social</li>
+          </ul>
+          <div class="team-row">
+            <span class="team-pill">Admission Team</span>
+            <span class="team-pill">Students (Featured)</span>
+            <span class="team-pill">Video Creator</span>
+          </div>
+        </div>
+        <div class="week-card">
+          <div class="week-label">Week 11 · Jul 23–27</div>
+          <h4>Viral Campaign Attempt</h4>
+          <ul>
+            <li>Design a campaign concept: e.g. "कसले हेर्छ तिमीलाई?" (Who will care for you?)</li>
+            <li>Multi-video narrative series over 5 days for maximum momentum</li>
+            <li>Cross-platform coordination: same campaign across all channels</li>
+            <li>Push for shares and duets/collaborations</li>
+          </ul>
+          <div class="team-row">
+            <span class="team-pill">Full Team</span>
+            <span class="team-pill">Bikash Chalise</span>
+            <span class="team-pill">Hira Tamang</span>
+          </div>
+        </div>
+        <div class="week-card">
+          <div class="week-label">Week 12 · Aug 4–11</div>
+          <h4>Contract Close & Handover</h4>
+          <ul>
+            <li>Final analytics report — all 90 days of data, compared against goals</li>
+            <li>Documented playbook for the internal team to continue independently</li>
+            <li>Content calendar for the next 30 days (post-contract continuity)</li>
+            <li>Renewal/extension discussion with Bikash & Hira</li>
+          </ul>
+          <div class="team-row">
+            <span class="team-pill">Bikash Chalise</span>
+            <span class="team-pill">Hira Tamang</span>
+            <span class="team-pill">Social Media Manager</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- TEAM STRUCTURE -->
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <h2>Recommended Internal Team at Academia</h2>
+  </div>
+
+  <p class="role-intro" style="margin-bottom:24px;">The following internal roles are needed from Academia's side to support efficient execution. These can be existing staff members or new recruits assigned to this campaign.</p>
+
+  <table class="channel-table">
+    <thead>
+      <tr>
+        <th>Role</th>
+        <th>Responsibilities</th>
+        <th>Time Required</th>
+        <th>Reports To</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:600; color:var(--ca-navy);">📹 Video Creator / On-Camera Presenter</td>
+        <td>Filming videos, appearing on camera, following scripts provided</td>
+        <td>3–4 hrs/week</td>
+        <td>Me (Strategist)</td>
+      </tr>
+      <tr>
+        <td style="font-weight:600; color:var(--ca-navy);">✂️ Video Editor</td>
+        <td>Editing raw footage: cuts, captions, music, effects, thumbnails</td>
+        <td>4–5 hrs/week</td>
+        <td>Me (Strategist)</td>
+      </tr>
+      <tr>
+        <td style="font-weight:600; color:var(--ca-navy);">📱 Social Media Manager</td>
+        <td>Publishing posts, responding to comments, cross-platform uploading</td>
+        <td>2–3 hrs/day</td>
+        <td>Hira Tamang</td>
+      </tr>
+      <tr>
+        <td style="font-weight:600; color:var(--ca-navy);">🎓 Subject Expert / Trainer</td>
+        <td>Appearing in educational content videos when credibility content is needed</td>
+        <td>1–2 hrs/week</td>
+        <td>Bikash Chalise</td>
+      </tr>
+      <tr>
+        <td style="font-weight:600; color:var(--ca-navy);">🖼️ Graphic Designer (optional)</td>
+        <td>Creating static posts, thumbnails, story graphics for FB/Instagram</td>
+        <td>2–3 hrs/week</td>
+        <td>Hira Tamang</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <!-- KPIs -->
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <h2>Target KPIs by Phase</h2>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-phase">Month 1 · Foundation</div>
+      <div class="kpi-title">TikTok Total Views</div>
+      <div class="kpi-number">50K+</div>
+      <div class="kpi-label">cumulative views</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-phase">Month 1 · Foundation</div>
+      <div class="kpi-title">New Followers (TikTok)</div>
+      <div class="kpi-number">300+</div>
+      <div class="kpi-label">net new followers</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-phase">Month 1 · Foundation</div>
+      <div class="kpi-title">Avg. Video Watch Time</div>
+      <div class="kpi-number">>50%</div>
+      <div class="kpi-label">completion rate target</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-phase">Month 2 · Growth</div>
+      <div class="kpi-title">TikTok Total Views</div>
+      <div class="kpi-number">250K+</div>
+      <div class="kpi-label">cumulative views</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-phase">Month 2 · Growth</div>
+      <div class="kpi-title">New Followers (TikTok)</div>
+      <div class="kpi-number">1,000+</div>
+      <div class="kpi-label">net new followers</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-phase">Month 2 · Growth</div>
+      <div class="kpi-title">Cross-Channel Reach</div>
+      <div class="kpi-number">100K+</div>
+      <div class="kpi-label">combined platform reach</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-phase">Month 3 · Authority</div>
+      <div class="kpi-title">TikTok Total Views</div>
+      <div class="kpi-number">750K+</div>
+      <div class="kpi-label">cumulative views</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-phase">Month 3 · Authority</div>
+      <div class="kpi-title">TikTok Followers</div>
+      <div class="kpi-number">3,000+</div>
+      <div class="kpi-label">total followers</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-phase">Month 3 · Authority</div>
+      <div class="kpi-title">Enrollment Inquiries (Social)</div>
+      <div class="kpi-number">30+</div>
+      <div class="kpi-label">attributed to social</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SCHEDULE -->
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <h2>Weekly Office Session Schedule</h2>
+  </div>
+
+  <div class="schedule-box">
+    <div class="schedule-head">
+      <h3>Recurring Wednesday Sessions — Every Week for 90 Days</h3>
+      <span class="start-badge">Starts 13 May 2026</span>
+    </div>
+
+    <div class="schedule-week">
+      <div class="sw-date">
+        <div class="day-name">Wednesday</div>
+        May 13, 2026<br>
+        <span class="time">4:00 PM – 6:00 PM</span>
+      </div>
+      <div class="sw-detail">
+        <h4>Session 1 — Kickoff & Alignment</h4>
+        <p>Contract signing, goal alignment, account access setup, initial audit review, and first brief handover. Sets the tone and pace for the entire engagement.</p>
+        <div class="sw-tags">
+          <span class="sw-tag">Bikash Chalise</span>
+          <span class="sw-tag">Hira Tamang</span>
+          <span class="sw-tag">Social Media Manager</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="schedule-week">
+      <div class="sw-date">
+        <div class="day-name">Every Wednesday</div>
+        Ongoing<br>
+        <span class="time">4:00 PM – 6:00 PM</span>
+      </div>
+      <div class="sw-detail">
+        <h4>Standard Weekly Session Structure (2 Hours)</h4>
+        <p><strong>First 45 mins:</strong> Performance review — last week's content analytics, what worked, what didn't, and why. Team debrief on production challenges.</p>
+        <p><strong>Next 45 mins:</strong> Next week's content planning — finalizing scripts, assigning roles, confirming shoot days and logistics.</p>
+        <p><strong>Final 30 mins:</strong> Open Q&A, creative ideation, trend discussion, and any brand/communications decisions needing strategic input.</p>
+        <div class="sw-tags">
+          <span class="sw-tag">Bikash Chalise</span>
+          <span class="sw-tag">Hira Tamang</span>
+          <span class="sw-tag">Video Creator</span>
+          <span class="sw-tag">Video Editor</span>
+          <span class="sw-tag">Social Media Manager</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FINANCIAL SUMMARY -->
+  <div class="section-header">
+    <div class="section-num">12</div>
+    <h2>Financial Summary</h2>
+  </div>
+
+  <div class="financial-box">
+    <div class="financial-head">
+      <h3>90-Day Contract — Fee Breakdown</h3>
+      <div class="total">NPR 1,20,000 Total</div>
+    </div>
+    <div class="financial-rows">
+      <div class="fin-row header">
+        <span>Description</span>
+        <span>Hours</span>
+        <span style="text-align:right;">Rate (NPR)</span>
+        <span style="text-align:right;">Amount (NPR)</span>
+      </div>
+      <div class="fin-row">
+        <span class="item-name">Monthly Office Sessions (2 hrs/week × 4 weeks)</span>
+        <span class="item-num">8 hrs</span>
+        <span class="item-num">2,500</span>
+        <span class="item-amount">20,000</span>
+      </div>
+      <div class="fin-row">
+        <span class="item-name">Monthly Remote Planning & Analysis (2 hrs/week × 4 weeks)</span>
+        <span class="item-num">8 hrs</span>
+        <span class="item-num">2,500</span>
+        <span class="item-amount">20,000</span>
+      </div>
+      <div class="fin-row">
+        <span class="item-name" style="color:var(--ca-muted); font-style:italic;">Monthly Subtotal (16 hrs/month)</span>
+        <span class="item-num">16 hrs</span>
+        <span class="item-num">—</span>
+        <span class="item-amount">40,000</span>
+      </div>
+      <div class="fin-row total-row">
+        <span>Total Contract Value (3 Months × NPR 40,000)</span>
+        <span style="text-align:right;">48 hrs</span>
+        <span style="text-align:right;">2,500</span>
+        <span style="text-align:right; font-family:'DM Mono',monospace;">NPR 1,20,000</span>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size:13px; color:var(--ca-muted); line-height:1.7; margin-bottom:0;">
+    <strong style="color:var(--ca-navy);">Payment Terms:</strong> Monthly invoicing on the 1st of each month. Payment due within 7 days. First invoice due June 1, 2026 (covering May 13–31, pro-rated for 3 sessions). All amounts in Nepalese Rupees (NPR).
+  </p>
+
+  <div class="divider"></div>
+
+  <!-- SIGNATURE -->
+  <div class="sig-section">
+    <h3>Agreement & Acceptance</h3>
+    <p>By signing below, both parties agree to the terms, scope, schedule, and compensation outlined in this proposal.</p>
+
+    <div class="sig-grid">
+      <div class="sig-box">
+        <div class="sig-name">Content & Growth Strategist</div>
+        <div class="sig-role">Service Provider</div>
+        <br><br>
+        <div class="sig-date-field">Signature: ________________________</div>
+        <br>
+        <div class="sig-date-field">Date: ____________________________</div>
+      </div>
+      <div class="sig-box">
+        <div class="sig-name">Caregiver Academia Nepal</div>
+        <div class="sig-role">Mr. Bikash Chalise / Mr. Hira Tamang</div>
+        <br><br>
+        <div class="sig-date-field">Signature: ________________________</div>
+        <br>
+        <div class="sig-date-field">Date: ____________________________</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; padding: 40px 0 20px; font-size:12px; color:var(--ca-muted);">
+    Prepared with care · Caregiver Academia Nepal TikTok Growth Proposal · May 2026
+  </div>
+
+</div>
+</body>
+</html>
